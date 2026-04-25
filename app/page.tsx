@@ -43,9 +43,9 @@ export default function Home() {
   return (
     <StyledMain>
       
-      {data && data.user ? (
+      {data && data.user && data.user.image ? (
         <CenterDiv>
-          <StyledImg src="https://cdn.thegreatprojects.com/thegreatprojects/images/f/3/6/9/7/f369758da04e040151acc19bf7a552cb.png?width=364&height=364&format=png" referrerPolicy="no-referrer" alt="Profile Picture" />
+          <StyledImg src={data.user.image} referrerPolicy="no-referrer" alt="Profile Picture" />
           {/* "referrerPolicy" solved an issue with the image not rendering.
               I found out about it via https://stackoverflow.com/questions/73052741/google-profile-picture-not-rendering. */}
           <StyledH2>{data.user.name}</StyledH2>

@@ -50,6 +50,8 @@ export default function Home() {
               I found out about it via https://stackoverflow.com/questions/73052741/google-profile-picture-not-rendering. */}
           <StyledH2>{data.user.name}</StyledH2>
           <StyledH3>{data.user.email}</StyledH3>
+          <br/>
+          <StyledButton onClick={handleSignOut}>Sign Out</StyledButton>
         </CenterDiv>
       ) : (
         <CenterDiv>
